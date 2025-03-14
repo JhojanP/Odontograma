@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESM Web App</title>
+    <style>
+        .contenedor {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100vh;
+            gap: 2px;
+            
+        }
+
+
+        .pieza{
+            position: relative;  
+        }
+        
+        .superior{
+            display: flex; 
+        }
+
+
+        .cuadrado {
+
+            position: relative;
+            width: 80px;
+            height: 40px; 
+            border : 2px solid black ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+         
+
+        .triangulo {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 60px solid black; /* Línea negra */
+        }
+        .t1{
+           z-index: 1;  
+        }
+
+        .t2{
+            left: -20px;   
+        }
+        .t3{
+            left: -36px;   
+        }
+
+
+
+        .triangulo::after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: -20px; 
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 60px solid white; /* Triángulo interno del color de fondo */
+        }
+
+
+
+
+         
+        .aspa {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+        .aspa::before, .aspa::after {
+            content: "";
+            position: absolute;
+            background-color: black;
+            width:  90px; 
+            height: 2px;
+            margin: 0 auto;
+        }
+        .aspa::before { 
+            transform: rotate(26deg); /* Línea inclinada */
+        }
+        .aspa::after {
+            transform: rotate(-26deg); /* Línea inclinada opuesta */
+        }
+
+
+ 
+        .cuadrado-interno {
+            position: inherit;
+            width: 45px;
+            height: 20px; 
+            border : 2px solid black ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: white;
+            z-index: 1;
+        }
+
+        .cruz {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cruz::before, .cruz::after {
+            content: "";
+            position: absolute;
+            background-color: black;
+        }
+        .cruz::before {
+            width: 100%;
+            height: 2px; /* Línea horizontal */
+        }
+        .cruz::after {
+            width: 2px;
+            height: 100%; /* Línea vertical */
+        }
+ 
+    </style>
+    <script type="module" src="src/js/app.mjs"></script>
+</head>
+<body>
+    <div class="contenedor" id="App"></div>
+         
+    </div>
+</body>
+</html>
