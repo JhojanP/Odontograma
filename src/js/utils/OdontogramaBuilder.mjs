@@ -8,6 +8,7 @@ export class DienteBuilder {
         this.lado = "";
         this.numeroFDI = 0;
         this.caras = [];
+        this.imagenHtml="";
     }
 
     setNombre(nombre) {
@@ -56,6 +57,11 @@ export class DienteBuilder {
         return this;
     }
 
+    setImagenHTML(html) {  
+        this.imagenHtml = html;
+        return this;
+    }
+
     build() {
         return new Pieza(
             this.nombre,
@@ -64,7 +70,8 @@ export class DienteBuilder {
             this.ubicacion,
             this.lado,
             this.numeroFDI,
-            this.caras
+            this.caras,
+            this.imagenHtml
         );
     } 
 }

@@ -1,0 +1,82 @@
+ 
+        .pieza{
+            width: 55px;
+            height:75px;
+            position: relative;  
+        }
+        
+        .superior{
+            display: flex; 
+        }
+
+
+        .cuadrado { 
+            position: relative;
+            width: 100%;
+            height: 100%; 
+            border : 2px solid black ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+         
+
+         
+
+         
+        .triangulo {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .triangulo:nth-child(1) { background-color: red;    clip-path: polygon(0% 0%, 50% 50%, 0% 100%); }
+        .triangulo:nth-child(2) { background-color: blue;   clip-path: polygon(100% 0%, 50% 50%, 0% 0%); }
+        .triangulo:nth-child(3) { background-color: green;  clip-path: polygon(0% 100%, 50% 50%, 100% 100%); }
+        .triangulo:nth-child(4) { background-color: yellow; clip-path: polygon(100% 100%, 50% 50%, 100% 0%); }
+   
+
+
+
+
+ 
+        .cuadrado-interno {
+            position: inherit;
+            width: 50%;
+            height: 50%; 
+            border : 2px solid black ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: white;
+            z-index: 1;
+            aspect-ratio: 1 / 1;
+        }
+
+        .cruz {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1 / 1;
+        }
+        .cruz::before, .cruz::after {
+            content: "";
+            position: absolute;
+            background-color: black;
+        }
+        .cruz::before {
+            width: 100%;
+            height: 2px; 
+        }
+        .cruz::after {
+            width: 2px;
+            height: 100%; 
+        }
+  
+
+  

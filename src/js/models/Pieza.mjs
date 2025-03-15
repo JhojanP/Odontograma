@@ -1,5 +1,5 @@
 export class Pieza {
-    constructor(nombre, abreviatura, funcion, ubicacion, lado, numeroFDI, caras) {
+    constructor(nombre, abreviatura, funcion, ubicacion, lado, numeroFDI, caras,imagenHtml) {
         this.nombre = nombre;
         this.abreviatura = abreviatura;
         this.funcion = funcion;
@@ -7,5 +7,6 @@ export class Pieza {
         this.lado = lado;
         this.numeroFDI = numeroFDI;
         this.caras = caras;
+        this.imagenHtml=imagenHtml;
     }
 }

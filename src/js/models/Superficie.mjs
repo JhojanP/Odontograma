@@ -4,5 +4,6 @@ export const Superficie = {
      M: "Mesial", 
      D: "Distal", 
      O: "Oclusal",
-     P: "Palatina"
+     P: "Palatina",
+     I:"Incisal"
 };
